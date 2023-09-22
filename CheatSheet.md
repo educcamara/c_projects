@@ -40,6 +40,23 @@
 - ```++```: Incremento
 - ```--```: Decremento
 
+Extras
+Por meio do ```#include <math.h>```:
+
+- ```pow(x, y)```: Potência
+- ```sqrt(x)```: Raiz quadrada
+- ```cbrt(x)```: Raiz cúbica
+- ```hypot(x, y)```: Hipotenusa
+- ```ceil(x)```: Arredonda para cima
+- ```floor(x)```: Arredonda para baixo
+- ```round(x)```: Arredonda para o mais próximo
+- ```fabs(x)```: Valor absoluto
+- ```log(x)```: Logaritmo natural
+- ```log10(x)```: Logaritmo na base 10
+- ```sin(x)```: Seno (Em radianos)
+- ```cos(x)```: Cosseno
+- ```tan(x)```: Tangente
+
 > **!! Importante**
 > Atribuir a chamada de (float) antes de uma variável inteira para sua divisão em números reais
 
@@ -109,4 +126,38 @@ Display em %d
     bool isTrue = true;
     printf("O valor é %d\n", isTrue);
     // Saída: O valor é 1
+
+```
+
+## Input
+
+Lê até um ' '
+
+Utiliar ```fgets``` para ler strings com espaços
+
+- Recebe 3 parâmetros: ```fgets(variavel, tamanho, stdin)```
+
+```c
+    ...
+    int age;
+    scanf("%d", &number);
+
+    float number;
+    scanf("%f", &number);
+
+    char name[20];
+    fgets(name, 20, stdin);
+    ...
+```
+
+```c
+...
+#include <string.h> // Para utilizar a função strlen
+
+...
+char name[20];
+fgets(name, 20, stdin);
+name[strlen(name) - 1] = '\0'; // Para remover o '\n' do final da string
+...
+
 ```
