@@ -2,7 +2,10 @@
 
 ## Sumário
 
-- [Área de um Círculo](#calculadora-de-área-de-círculo)
+- [Projetos em C](#projetos-em-c)
+  - [Sumário](#sumário)
+  - [Calculadora de Área de Círculo](#calculadora-de-área-de-círculo)
+  - [Calculadora de Circunferência de Círculo](#calculadora-de-circunferência-de-círculo)
 
 ## Calculadora de Área de Círculo
 

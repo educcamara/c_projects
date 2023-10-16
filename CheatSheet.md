@@ -4,6 +4,8 @@
 
 - [Comandos Gerais](#comandos-gerais)
 - [Tipos de Dados](#tipos-de-dados)
+- [Input](#input)
+- [Ifs](#ifs)
 
 ## Comandos Gerais
 
@@ -14,6 +16,12 @@
 - ```#include```: Comando para incluir bibliotecas no arquivo
     ```#include <stdio.h>```: Biblioteca padrão de saída de dados
 - ```const ...```: Constante (Convenção em Caixa Alta)
+- Operadores Lógicos:
+  - ```==```: Igual
+  - ```!=```: Diferente
+  - ```&&```: E
+  - ```||```: Ou
+  - ```!```: Não
 
 ### Formatação de saída de dados
 
@@ -160,4 +168,57 @@ fgets(name, 20, stdin);
 name[strlen(name) - 1] = '\0'; // Para remover o '\n' do final da string
 ...
 
+```
+
+## Ifs
+
+```c
+    if (condition) {
+        // code
+    } else if (condition) {
+        // code
+    } else {
+        // code
+    }
+```
+
+## Switch
+
+```c
+    switch (variable) {
+        case 1:
+            // code
+            break;
+        case 2:
+            // code
+            break;
+        default:
+            // code
+            break;
+    }
+```
+
+## If Terário
+
+```c
+    (condition) ? true : false;
+    // Se a condição for verdadeira, retorna o primeiro valor, se não, retorna o segundo
+```
+
+## Protótipo de Função
+
+Utilizar para definir a função depois do main, mas antes de sua chamada evitar que não ocorra `garbage values`
+
+```c
+    int sum(int a, int b); // Protótipo da função
+
+    int main() {
+        int result = sum(1, 2);
+        printf("%d\n", result);
+        return 0;
+    }
+
+    int sum(int a, int b) { // Definição da função
+        return a + b;
+    }
 ```

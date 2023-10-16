@@ -1,35 +1,37 @@
 #include <stdio.h>
+#include <math.h>
 
-float areaOfCircle (float radius) {
-    const float PI = 3.1415;
-    float area = PI * radius * radius;
+// float areaOfCircle (float radius) {
+//     const float PI = 3.1415;
+//     float area = PI * radius * radius;
 
-    return area;
-}
+//     return area;
+// }
 
-float circumferenceOfCircle (float radius) {
-    const float PI = 3.1415;
-    float circumference = 2 * PI * radius;
+// float circumferenceOfCircle (float radius) {
+//     const float PI = 3.1415;
+//     float circumference = 2 * PI * radius;
 
-    return circumference;
-}
+//     return circumference;
+// }
 
 int main() {
 
-    float radius;
-    float area;
-    float circumf;
+    float a;
+    float b;
+    float c;
 
-    printf("Calculadora de Área de Círculo\n\n");
+    printf("Calculadora de Hipotenusa\n");
 
-    printf("Digite o valor do raio: ");
-    scanf("%f", &radius);
+    printf("Digite o lado A: ");
+    scanf("%f", &a);
 
-    area = areaOfCircle(radius);
-    circumf = circumferenceOfCircle(radius);
+    printf("Digite o lado B: ");
+    scanf("%f", &b);
 
-    printf("Área do círculo: %.2f\n", area);
-    printf("Área da circunferência: %.2f\n", circumf);
+    c = sqrt(a * a + b * b);
+
+    printf("Lado C: %.2f\n", c);
 
     return 0;
 }
