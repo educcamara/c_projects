@@ -6,8 +6,13 @@
 - [Tipos de Dados](#tipos-de-dados)
 - [Input](#input)
 - [Ifs](#ifs)
+- [Switch](#switch)
+- [Protótipo de Função](#protótipo-de-função)
 
 ## Comandos Gerais
+
+- [Formatação de Saída de Dados](#formatação-de-saída-de-dados)
+- [Operadores Matemáticos](#operadores-matemáticos)
 
 ### Comandos Básicos
 
@@ -23,7 +28,7 @@
   - ```||```: Ou
   - ```!```: Não
 
-### Formatação de saída de dados
+### Formatação de Saída de Dados
 
 - ```\n```: Quebra de linha
 - ```\t```: Tab
@@ -37,6 +42,38 @@
 - ```%2```: 2 sendo o número de caracteres
 - ```%02```: 2 sendo o número de caracteres, preenchendo com 0
 - ```%-2```: 2 sendo o número de caracteres, alinhando à esquerda
+
+### Manipulação de Strings
+
+Necessário o módulo `<string.h>`
+
+> Exemplo:
+> ```c
+> char str1[] = "Cade";
+> char str2[] = "Cadu";
+> ```
+
+- `strupr(str1)` -> `str1 = "CADE"`
+- `strlwr(str1)` -> `str1 = "cadu"`
+- `strcat(str1, str2)` -> `str1 = "CadeCadu"`
+- `strncat(str1, str2, 1)` -> `str1 = "CadeC"`
+- `strcpy(str1, str2)` -> `str1 = "Cadu"`
+- `strncpy(str1, str2, 1)` -> `str1 = "C"`
+
+
+- `strset(str1, '?')` -> `str1 = "????"`
+- `strnset(str1, 'A', 1)` -> `str1 = "Aade"`
+- `strrev(str1)` -> `str1 = "udaC"`
+
+
+- `int res = strlen(str1)` -> `res = 4`
+- `int res = strcmp(str1, str2)` -> `res = -1`
+  - compara se strings são iguais
+  - retorna 0 se forem iguais, retorna -1 caso contrário
+- `int res = strncmp(str1, str2, 3)` -> `res = 0`
+  - compara os n primeiros dígitos
+- `int res = strcmpi(str1, str2)`
+  - Não é *case sensitive*
 
 ### Operadores Matemáticos
 
@@ -70,22 +107,27 @@ Por meio do ```#include <math.h>```:
 
 ## Tipos de Dados
 
+- [Inteiros](#inteiros)
+- [Floats](#floats)
+- [Caracteres](#caracteres)
+- [Booleanos](#booleanos)
+
 ### Inteiros
 
-Display em %d
+Display em %d\
 Display em %u (Unsigned)
 
-Ints
+#### Ints
 
 - ```int```: 4 bytes *(-2bi -- +2bi)*
 - ```unsigned int```: 4 bytes *(0 -- +4bi)*
 
-Shorts
+#### Shorts
 
 - ```short```: 2 bytes *(-32k -- 32k)*
 - ```unsigned short```: 2 bytes *(0 -- +64k)*
 
-Longs
+#### Longs
 
 - ```long long```: 8 bytes
 - ```unsigned long long```: 8 bytes *(0 -- +18qi)*
@@ -93,7 +135,8 @@ Longs
 
 ### Floats
 
-Display em %f
+Display em %f\
+Display em %lf (long float)
 
 - ```float```: 4 bytes *(6-7 casas decimais)*
 - ```double```: 8 bytes *(15-16 casas decimais)*
@@ -139,9 +182,9 @@ Display em %d
 
 ## Input
 
-Lê até um ' '
+Comando `scanf` lê até um ' '
 
-Utiliar ```fgets``` para ler strings com espaços
+Utilizar ```fgets``` para ler strings com espaços
 
 - Recebe 3 parâmetros: ```fgets(variavel, tamanho, stdin)```
 
@@ -182,6 +225,13 @@ name[strlen(name) - 1] = '\0'; // Para remover o '\n' do final da string
     }
 ```
 
+### If Ternário
+
+```c
+    (condition) ? true : false;
+    // Se a condição for verdadeira, retorna o primeiro valor, se não, retorna o segundo
+```
+
 ## Switch
 
 ```c
@@ -198,16 +248,11 @@ name[strlen(name) - 1] = '\0'; // Para remover o '\n' do final da string
     }
 ```
 
-## If Terário
-
-```c
-    (condition) ? true : false;
-    // Se a condição for verdadeira, retorna o primeiro valor, se não, retorna o segundo
-```
-
 ## Protótipo de Função
 
 Utilizar para definir a função depois do main, mas antes de sua chamada evitar que não ocorra `garbage values`
+
+Considerado boa prática
 
 ```c
     int sum(int a, int b); // Protótipo da função
