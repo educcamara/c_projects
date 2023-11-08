@@ -11,6 +11,7 @@
 
 ## Comandos Gerais
 
+- [Comandos Básicos](#comandos-básicos)
 - [Formatação de Saída de Dados](#formatação-de-saída-de-dados)
 - [Operadores Matemáticos](#operadores-matemáticos)
 
@@ -267,3 +268,49 @@ Considerado boa prática
         return a + b;
     }
 ```
+
+
+## For Loops
+
+Três Parâmetros:
+- Variável Inicial
+- Condição de Parada
+- Adicionar ou Subtrair a variável
+
+```c
+for (int i = 1; i <= 10; i++){
+    // code
+}
+```
+
+## While Loops
+
+### while() Loop
+
+- Primeiramente checa uma condição para depois executar, se for o caso
+
+- Repete um bloco de código quantas vezes desejar,
+enquanto uma condição é verdadeira
+
+- Pode sequer ser executado
+
+Exemplo:
+```c
+// Inicializando a variável
+char name[25];
+printf("\nQual é o seu nome: ");
+fgets(name, 25, stdin);
+name[strlen(name) - 1] = '\0';
+
+while (strlen(name) == 0) {
+  printf("\nQual é o seu nome: ");
+  fgets(name, 25, stdin);
+  name[strlen(name) - 1] = '\0';
+}
+
+```
+
+### do while
+
+- Primeiramente realiza o código uma vez, depois checa uma condição
+para repetir
