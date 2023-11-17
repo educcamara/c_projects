@@ -1,37 +1,48 @@
 #include <stdio.h>
-#include <math.h>
+//#include <string.h>
+//#include <math.h>
 
-// float areaOfCircle (float radius) {
-//     const float PI = 3.1415;
-//     float area = PI * radius * radius;
-
-//     return area;
-// }
-
-// float circumferenceOfCircle (float radius) {
-//     const float PI = 3.1415;
-//     float circumference = 2 * PI * radius;
-
-//     return circumference;
-// }
+void print_array(int m, int array[m]);
+void print_matrix(int m, int n, int array[m][n]);
 
 int main() {
+    int m;
+    int n;
 
-    float a;
-    float b;
-    float c;
+    printf("Digite a quantidade de linhas: ");
+    scanf("%d", &m);
+    printf("Digite a quantidade de colunas: ");
+    scanf("%d", &n);
 
-    printf("Calculadora de Hipotenusa\n");
+    int matrix[m][n];
 
-    printf("Digite o lado A: ");
-    scanf("%f", &a);
-
-    printf("Digite o lado B: ");
-    scanf("%f", &b);
-
-    c = sqrt(a * a + b * b);
-
-    printf("Lado C: %.2f\n", c);
+    int i = 0;
+    while (i < m) {
+        int j = 0;
+        while (j < n) {
+            matrix[i][j] = 0;
+            j++;
+        }
+        i++;
+    }
+    print_matrix(m, n, matrix);
 
     return 0;
+}
+
+void print_array(int m, int array[m]) {
+    int i = 0;
+    while (i < m) {
+        printf("%d ", array[i]);
+        i++;
+    }
+    printf("\n");
+}
+
+void print_matrix(int m, int n, int array[m][n]) {
+    int i = 0;
+    while (i < m) {
+        print_array(n, array[i]);
+        i++;
+    }
 }
