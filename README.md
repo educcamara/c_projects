@@ -5,6 +5,7 @@
 - [Sumário](#sumário)
 - [Calculadora de Área de Círculo](#calculadora-de-área-de-círculo)
 - [Calculadora de Circunferência de Círculo](#calculadora-de-circunferência-de-círculo)
+- [Criador de Matriz](#criador-de-matriz)
 
 ## Calculadora de Área de Círculo
 
