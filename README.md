@@ -1,5 +1,7 @@
 # Projetos em C
 
+Um repositório para aprender C por meio de projetos simples.
+
 ## Sumário
 
 - [Sumário](#sumário)
